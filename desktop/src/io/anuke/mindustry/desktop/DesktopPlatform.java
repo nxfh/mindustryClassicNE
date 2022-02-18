@@ -27,7 +27,7 @@ import static io.anuke.mindustry.Vars.*;
 
 public class DesktopPlatform extends Platform {
     final static boolean useDiscord = UCore.getPropertyNotNull("sun.arch.data.model").equals("64");
-    final static String applicationId = "398246104468291591";
+    final static String applicationId = "943641085488558140";
     final static DateFormat format = SimpleDateFormat.getDateTimeInstance();
     String[] args;
 

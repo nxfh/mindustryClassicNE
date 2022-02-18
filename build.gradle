@@ -15,7 +15,7 @@ buildscript {
 }
 
 allprojects {
-    version = 'nxfh'//'release'
+    version = 'nxfh'
 
     ext {
         versionNumber = 'classic: nxfh\'s Edition'
