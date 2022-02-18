@@ -10,7 +10,7 @@ public class TankType extends EnemyType {
 	public TankType() {
 		super("tankenemy");
 		
-		health = 350;
+		health = 350 / HEALTH_SCALING;
 		speed = 0.24f;
 		reload = 90f;
 		rotatespeed = 0.06f;

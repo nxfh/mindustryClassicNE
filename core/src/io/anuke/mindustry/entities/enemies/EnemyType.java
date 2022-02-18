@@ -24,14 +24,15 @@ import io.anuke.ucore.util.Strings;
 import static io.anuke.mindustry.Vars.*;
 
 public class EnemyType {
+    protected static final int HEALTH_SCALING = 5;
 
     //TODO documentation, comments
     private static byte lastid = 0;
     private static Array<EnemyType> types = new Array<>();
 
     public final static Color[] tierColors = {
-            Color.valueOf("ffe451"), Color.valueOf("f48e20"), Color.valueOf("ff6757"),
-            Color.valueOf("ff2d86"), Color.valueOf("cb2dff"), Color.valueOf("362020") };
+            Color.valueOf("00AA00"), Color.valueOf("0077FF"), Color.valueOf("770077"),
+            Color.valueOf("AF0000"), Color.valueOf("FF7700"), Color.valueOf("FFFA00") };
     public final static int maxtier = tierColors.length;
     public final static float maxIdleLife = 60f*2f; //2 seconds idle = death
     public final static float hitDuration = 5f;
@@ -40,7 +41,7 @@ public class EnemyType {
     public final byte id;
 
     protected int timeid;
-    protected int health = 60;
+    protected int health = 60 / HEALTH_SCALING;
     protected float hitsize = 5f;
     protected float hitsizeTile = 4f;
     protected float speed = 0.4f;

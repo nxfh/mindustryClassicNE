@@ -14,7 +14,7 @@ public class TitanType extends EnemyType {
 		
 		speed = 0.26f;
 		reload = 30;
-		health = 430;
+		health = 430 / HEALTH_SCALING;
 		range = 60f;
 		bullet = BulletType.small;
 		hitsize = 7f;

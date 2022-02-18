@@ -20,7 +20,7 @@ public class FortressType extends EnemyType {
 		
 		speed = 0.25f;
 		reload = 90;
-		health = 700;
+		health = 700 / HEALTH_SCALING;
 		range = 70f;
 		bullet = BulletType.yellowshell;
 		hitsize = 10f;

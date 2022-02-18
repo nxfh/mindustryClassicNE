@@ -8,7 +8,7 @@ public class MortarType extends EnemyType {
 	public MortarType() {
 		super("mortarenemy");
 		
-		health = 200;
+		health = 200 / HEALTH_SCALING;
 		speed = 0.25f;
 		reload = 100f;
 		bullet = BulletType.shell;

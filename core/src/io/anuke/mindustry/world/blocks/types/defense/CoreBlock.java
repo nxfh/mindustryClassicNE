@@ -9,11 +9,12 @@ import static io.anuke.mindustry.Vars.debug;
 import static io.anuke.mindustry.Vars.state;
 
 public class CoreBlock extends Block {
+	
 
     public CoreBlock(String name) {
         super(name);
 
-        health = 800;
+        health = 1000;
         solid = true;
         destructible = true;
         width = 3;

@@ -9,10 +9,9 @@ import io.anuke.mindustry.entities.enemies.EnemyType;
 import static io.anuke.mindustry.Vars.tilesize;
 
 public class BlastType extends EnemyType {
-
 	public BlastType() {
 		super("blastenemy");
-		health = 30;
+		health = 30 / HEALTH_SCALING;
 		speed = 0.8f;
 		bullet = null;
 		turretrotatespeed = 0f;

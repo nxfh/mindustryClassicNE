@@ -11,7 +11,7 @@ public class FastType extends EnemyType {
 		reload = 20;
 		mass = 0.2f;
 		
-		health = 50;
+		health = 50 / HEALTH_SCALING;
 	}
 
 }

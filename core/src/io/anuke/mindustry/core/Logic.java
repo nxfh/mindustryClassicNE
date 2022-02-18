@@ -74,6 +74,8 @@ public class Logic extends Module {
 
         for(EnemySpawn spawn : spawns){
             Array<SpawnPoint> spawns = world.getSpawns();
+			
+			spawn.initializeMaximum(spawns.size);
 
             for(int lane = 0; lane < spawns.size; lane ++){
                 int fl = lane;

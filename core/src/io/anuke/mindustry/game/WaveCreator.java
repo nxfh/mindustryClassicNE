@@ -4,6 +4,7 @@ import com.badlogic.gdx.utils.Array;
 import io.anuke.mindustry.entities.enemies.EnemyTypes;
 
 public class WaveCreator{
+    private static final int BOSS_WAVE = 14;
 	
 	public static Array<EnemySpawn> getSpawns(){
 
@@ -19,6 +20,7 @@ public class WaveCreator{
 				spacing = 5;
 				amount = 3;
 				tierscaleback = 0;
+				absoluteMax = 150;
 			}},
 			
 			new EnemySpawn(EnemyTypes.blast){{
@@ -48,6 +50,7 @@ public class WaveCreator{
 				spacing = 5;
 				scaling = 1;
 				amount = 1;
+				absoluteMax = 150;
 			}},
 			
 			new EnemySpawn(EnemyTypes.standard){{
@@ -72,14 +75,14 @@ public class WaveCreator{
 			}},
 			
 			new EnemySpawn(EnemyTypes.emp){{
-				after = 15;
+				after = 13;
 				amount = 1;
 				spacing = 5;
 				scaling = 2;
 			}},
 			
 			new EnemySpawn(EnemyTypes.blast){{
-				after = 4 + 5 + 5;
+				after = 12;
 				amount = 3;
 				spacing = 5;
 				scaling = 2;
@@ -87,14 +90,15 @@ public class WaveCreator{
 			}},
 			//boss wave
 			new EnemySpawn(EnemyTypes.fortress){{
-				after = 16;
+				after = BOSS_WAVE;
 				amount = 1;
 				spacing = 5;
 				scaling = 1;
+				absoluteMax = 50;
 			}},
 			
 			new EnemySpawn(EnemyTypes.titan){{
-				after = 16;
+				after = BOSS_WAVE;
 				amount = 1;
 				spacing = 5;
 				scaling = 3;
@@ -102,23 +106,25 @@ public class WaveCreator{
 			}},
 			
 			new EnemySpawn(EnemyTypes.healer){{
-				after = 16;
+				after = BOSS_WAVE;
 				spacing = 5;
 				scaling = 2;
 				amount = 2;
+				absoluteMax = 150;
 			}},
 			//end boss wave
 			
 			//enchanced boss wave
 			new EnemySpawn(EnemyTypes.mortar){{
-				after = 16 + 5;
+				after = BOSS_WAVE + 5;
 				amount = 1;
 				spacing = 5;
 				scaling = 3;
+				absoluteMax = 50;
 			}},
 			
 			new EnemySpawn(EnemyTypes.emp){{
-				after = 16 + 5;
+				after = BOSS_WAVE + 5;
 				amount = 1;
 				spacing = 5;
 				scaling = 3;

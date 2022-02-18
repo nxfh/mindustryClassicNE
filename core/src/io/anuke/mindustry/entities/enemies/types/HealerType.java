@@ -24,7 +24,7 @@ public class HealerType extends EnemyType {
 		super("healerenemy");
 		speed = 0.25f;
 		reload = 10;
-		health = 200;
+		health = 200 / HEALTH_SCALING;
 		bullet = BulletType.shot;
 		range = 40f;
 		alwaysRotate = false;

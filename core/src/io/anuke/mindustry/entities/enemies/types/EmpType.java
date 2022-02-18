@@ -10,7 +10,7 @@ public class EmpType extends EnemyType {
 		
 		speed = 0.3f;
 		reload = 70;
-		health = 210;
+		health = 210 / HEALTH_SCALING;
 		range = 80f;
 		bullet = BulletType.emp;
 		turretrotatespeed = 0.1f;

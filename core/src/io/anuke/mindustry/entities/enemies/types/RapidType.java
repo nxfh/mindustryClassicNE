@@ -11,7 +11,7 @@ public class RapidType extends EnemyType {
 		reload = 8;
 		bullet = BulletType.purple;
 		rotatespeed = 0.08f;
-		health = 260;
+		health = 260 / HEALTH_SCALING;
 		speed = 0.33f;
 		hitsize = 8f;
 		mass = 3f;

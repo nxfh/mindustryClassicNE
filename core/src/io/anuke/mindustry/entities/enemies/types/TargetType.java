@@ -17,7 +17,7 @@ public class TargetType extends EnemyType {
 		super("targetenemy");
 
 		speed = 0f;
-		health = 40;
+		health = 40 / HEALTH_SCALING;
 		shootsound = null;
 	}
 	

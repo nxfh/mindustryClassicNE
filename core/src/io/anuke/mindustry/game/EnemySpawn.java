@@ -6,6 +6,8 @@ import io.anuke.ucore.util.Mathf;
 import static io.anuke.mindustry.Vars.state;
 
 public class EnemySpawn{
+	private int difference;
+	protected int absoluteMax = 100;
 	/**The enemy type spawned*/
 	public final EnemyType type;
 	/**When this spawns should end*/
@@ -15,13 +17,13 @@ public class EnemySpawn{
 	/**The spacing, in waves, of spawns. 2 = spawns every other wave*/
 	protected int spacing = 1;
 	/**How many waves need to pass after the start of this spawn for the tier to increase by one*/
-	protected int tierscale = 17;
+	protected int tierscale = 15;
 	/**How many more enemies there are, every time the tier increases*/
 	protected int tierscaleback = 0;
 	/**The tier this spawn starts at.*/
 	protected int tier = 1;
 	/**Maximum amount of enemies that spawn*/
-	protected int max = 60;
+	protected int max;
 	/**How many waves need to pass before the amount of enemies increases by 1*/
 	protected float scaling = 9999f;
 	/**Amount of enemies spawned initially, with no scaling*/
@@ -35,12 +37,22 @@ public class EnemySpawn{
 		if(wave < after || wave > before || (wave - after) % spacing != 0){
 			return 0;
 		}
-		float scaling = this.scaling * state.difficulty.enemyScaling;
 		
-		return Math.min(amount-1 + Math.max((int)((wave / spacing) / scaling), 1) + (tier(wave, lane)-1) * tierscaleback, max);
+		float scaling = this.scaling * state.difficulty.enemyScaling;
+
+		return Math.min(amount-1 + Math.max((int)((wave / spacing) / scaling), 1) + (tier(wave, lane)-1) * tierscaleback, (lane < difference) ? max + 1 : max);
 	}
 	
 	public int tier(int wave, int lane){
 		return Mathf.clamp(tier + (wave-after)/tierscale, 1, EnemyType.maxtier);
+	}
+	
+	final public void initializeMaximum(int spawns) {
+		difference = 0;
+		max = absoluteMax / spawns;
+			
+		if (max * spawns < absoluteMax) {
+			difference = absoluteMax - max * spawns;
+		}
 	}
 }

@@ -9,7 +9,7 @@ public class FlamerType extends EnemyType {
 		super("flamerenemy");
 		
 		speed = 0.35f;
-		health = 150;
+		health = 150 / HEALTH_SCALING;
 		reload = 6;
 		bullet = BulletType.flameshot;
 		shootsound = "flame";
