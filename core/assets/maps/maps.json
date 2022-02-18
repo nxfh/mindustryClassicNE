@@ -30,62 +30,90 @@
     },
     {
       "id": 4,
-      "name": "volcano",
+      "name": "canyon",
+      "visible": true,
+      "flipBase": false,
+      "backgroundColor": "646464"
+    },
+    {
+      "id": 5,
+      "name": "oilrush",
       "visible": true,
       "flipBase": true,
       "backgroundColor": "646464"
     },
     {
-      "id": 5,
-      "name": "caldera",
+      "id": 6,
+      "name": "pit",
       "visible": true,
       "flipBase": false,
       "backgroundColor": "646464"
     },
     {
-      "id": 6,
-      "name": "scorch",
-      "visible": true,
-      "flipBase": false,
-      "backgroundColor": "e5d8bb"
-    },
-    {
       "id": 7,
-      "name": "desert",
+      "name": "delta",
       "visible": true,
       "flipBase": false,
       "backgroundColor": "646464"
     },
     {
       "id": 8,
+      "name": "volcano",
+      "visible": true,
+      "flipBase": true,
+      "backgroundColor": "646464"
+    },
+    {
+      "id": 9,
+      "name": "caldera",
+      "visible": true,
+      "flipBase": false,
+      "backgroundColor": "646464"
+    },
+    {
+      "id": 10,
+      "name": "scorch",
+      "visible": true,
+      "flipBase": false,
+      "backgroundColor": "e5d8bb"
+    },
+    {
+      "id": 11,
+      "name": "desert",
+      "visible": true,
+      "flipBase": false,
+      "backgroundColor": "e5d8bb"
+    },
+    {
+      "id": 12,
       "name": "island",
       "visible": true,
       "flipBase": false,
       "backgroundColor": "e5d8bb"
     },
     {
-      "id": 9,
+      "id": 13,
       "name": "grassland",
       "visible": true,
       "flipBase": false,
       "backgroundColor": "5ab464"
     },
     {
-      "id": 10,
+      "id": 14,
       "name": "tundra",
       "visible": true,
       "flipBase": false,
-      "backgroundColor": "646464"
+      "backgroundColor": "f7feff"
     },
     {
-      "id": 11,
+      "id": 15,
       "name": "spiral",
       "visible": true,
       "flipBase": false,
       "backgroundColor": "f7feff"
     },
     {
-      "id": 12,
+      "id": 16,
       "name": "tutorial",
       "visible": false,
       "flipBase": false,
