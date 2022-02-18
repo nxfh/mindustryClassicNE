@@ -1,11 +1,6 @@
-![Imgur](https://i.imgur.com/w4N0yhv.png)
+![Imgur](https://i.imgur.com/B3D2EWM.png)
 
-An old, classic version of the pixelated sandbox tower defense game known as [Mindustry](https://github.com/Anuken/Mindustry).
-
-### Important Notice
-
-This repository is **no longer being maintained.** No features will be implemented, no PR will be accepted, no bugs will be fixed and no additional releases will be made.
-If you find an issue and know how to fix it, feel free to fork this repo.
+A modded version of an old, classic version of the pixelated sandbox tower defense game known as [Mindustry](https://github.com/Anuken/Mindustry).
 
 ### Building
 
@@ -24,4 +19,4 @@ _Running:_ `./gradlew desktop:run`
 _Building:_ `./gradlew desktop:dist`
 
 Gradle may take up to several minutes to download files. Be patient. <br>
-After building, the output .JAR file should be in the output JAR file should be in `/desktop/build/libs/desktop-release.jar.`
+After building, the output .JAR file should be in `/desktop/build/libs/` and should be named as `desktop-nE.jar.`
