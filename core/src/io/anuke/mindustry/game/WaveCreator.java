@@ -79,6 +79,7 @@ public class WaveCreator{
 				amount = 1;
 				spacing = 5;
 				scaling = 2;
+				absoluteMax = 50;
 			}},
 			
 			new EnemySpawn(EnemyTypes.blast){{
@@ -128,6 +129,7 @@ public class WaveCreator{
 				amount = 1;
 				spacing = 5;
 				scaling = 3;
+				absoluteMax = 50;
 			}}
 			//end enchanced boss wave
 		);

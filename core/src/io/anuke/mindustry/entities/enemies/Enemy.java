@@ -91,7 +91,7 @@ public class Enemy extends SyncEntity {
 	public void added(){
 		hitbox.setSize(type.hitsize);
 		hitboxTile.setSize(type.hitsizeTile);
-		maxhealth = type.health * tier;
+		maxhealth = type.health * Mathf.clamp((int)(tier / 1.5), 1, 4);
 		region = Draw.region(type.name + "-t" + Mathf.clamp(tier, 1, 3));
 
 		heal();
@@ -153,7 +153,7 @@ public class Enemy extends SyncEntity {
 		if(!(Net.client())) {
 			tr.trns(angle + rotation, type.length);
 			Bullet out = new Bullet(bullet, this, x + tr.x, y + tr.y, this.angle + rotation).add();
-			out.damage = (int) ((bullet.damage * (1 + (tier - 1) * 1f)));
+			out.damage = (bullet.damage * Mathf.clamp((int)(tier / 1.5), 1, 4));
 			type.onShoot(this, bullet, rotation);
 
 			if(Net.server()){

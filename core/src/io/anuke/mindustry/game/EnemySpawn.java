@@ -40,19 +40,21 @@ public class EnemySpawn{
 		
 		float scaling = this.scaling * state.difficulty.enemyScaling;
 
-		return Math.min(amount-1 + Math.max((int)((wave / spacing) / scaling), 1) + (tier(wave, lane)-1) * tierscaleback, (lane < difference) ? max + 1 : max);
+		return Math.min(amount-1 + Math.max((int)((wave / spacing) / scaling), 1) + (tier(wave)-1) * tierscaleback, (lane < difference) ? max + 1 : max);
 	}
 	
-	public int tier(int wave, int lane){
+	public int tier(int wave){
 		return Mathf.clamp(tier + (wave-after)/tierscale, 1, EnemyType.maxtier);
 	}
 	
-	final public void initializeMaximum(int spawns) {
+	final public void initializeMaximum(int spawns, int tier) {
+		int tierScaling = Mathf.clamp(tier / 2, 1, 2);
 		difference = 0;
-		max = absoluteMax / spawns;
+		
+		max = absoluteMax / tierScaling / spawns;
 			
-		if (max * spawns < absoluteMax) {
-			difference = absoluteMax - max * spawns;
+		if (max * spawns < absoluteMax / tierScaling) {
+			difference = absoluteMax / tierScaling - max * spawns;
 		}
 	}
 }
