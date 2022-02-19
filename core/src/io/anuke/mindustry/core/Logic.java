@@ -73,9 +73,10 @@ public class Logic extends Module {
         }
 
         for(EnemySpawn spawn : spawns){
+			int tier = spawn.tier(state.wave);
             Array<SpawnPoint> spawns = world.getSpawns();
 			
-			spawn.initializeMaximum(spawns.size);
+			spawn.initializeMaximum(spawns.size, tier);
 
             for(int lane = 0; lane < spawns.size; lane ++){
                 int fl = lane;
@@ -90,7 +91,7 @@ public class Logic extends Module {
                         Enemy enemy = new Enemy(spawn.type);
                         enemy.set(tile.worldx() + Mathf.range(range), tile.worldy() + Mathf.range(range));
                         enemy.lane = fl;
-                        enemy.tier = spawn.tier(state.wave, fl);
+                        enemy.tier = tier;
                         enemy.add();
 
                         Effects.effect(Fx.spawn, enemy);
